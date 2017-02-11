@@ -1,0 +1,40 @@
+{
+  "name": "api-transference",
+  "version": "0.0.1",
+  "private": true,
+  "description": "Transference API Project",
+  "keywords": [],
+  "author": "",
+  "license": "",
+  "main": "app.js",
+  "dependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "bluebird": "^3.4.7",
+    "body-parser": "^1.15.2",
+    "compression": "^1.6.2",
+    "express": "^4.12.3",
+    "express-session": "^1.14.2",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "helmet": "^3.4.0",
+    "mongoose": "^4.7.7",
+    "swagger-express-middleware": "^0.4.7",
+    "swagger-express-mw": "^0.1.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.18.0",
+    "babel-preset-es2015": "^6.18.0",
+    "babel-preset-stage-2": "^6.18.0",
+    "gulp": "^3.9.1",
+    "gulp-babel": "^6.1.2",
+    "should": "^7.1.0",
+    "supertest": "^1.0.0"
+  },
+  "scripts": {
+    "start": "node app.js",
+    "test": "swagger project test",
+    "prestart": "node_modules/.bin/gulp build"
+  }
+}
