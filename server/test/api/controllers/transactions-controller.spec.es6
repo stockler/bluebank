@@ -15,11 +15,11 @@ describe('controllers', () => {
         request(server)
           .post('/rest/transference')          
           .send({ 
-            "sourceAgency": 4300,
-            "sourceAccountNumber": 348086,
-            "destinationAgency": 4300,
-            "destinationAccountNumber": 348085,
-            "value": 1000
+            "sourceAgency": 3505,
+            "sourceAccountNumber": 45322,
+            "destinationAgency": 2143,
+            "destinationAccountNumber": 9831,
+            "value": 100
           })
           .expect('Content-Type', /json/)
           .expect(200)
@@ -37,10 +37,10 @@ describe('controllers', () => {
         request(server)
           .post('/rest/transference')          
           .send({ 
-            "sourceAgency": 4300,
-            "sourceAccountNumber": 348085,
-            "destinationAgency": 4300,
-            "destinationAccountNumber": 348086,
+            "sourceAgency": 2143,
+            "sourceAccountNumber": 9831,
+            "destinationAgency": 3505,
+            "destinationAccountNumber": 45322,
             "value": 1000
           })
           .expect('Content-Type', /json/)

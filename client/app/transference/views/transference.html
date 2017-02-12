@@ -1,11 +1,17 @@
 <md-content class="md-padding" layout="column" layout-align="center center">
 	<form name="transferenceForm" ng-submit="vm.transference(transferenceForm.$valid)" novalidate>  
 		<div layout="row" ng-init="vm.setForm(transferenceForm)" flex>
-			<account agency="vm.sourceAgency" account-number="vm.sourceAccountNumber" other-agency="vm.destinationAgency" other-account-number="vm.destinationAccountNumber" form="transferenceForm"></account>
+			<div>
+				<h3>Origin</h3>
+				<account agency="vm.sourceAgency" account-number="vm.sourceAccountNumber" other-agency="vm.destinationAgency" other-account-number="vm.destinationAccountNumber" form="vm.registerFormScope"></account>
+			</div>
 			<div layout="row" layout-align="center center">
 				=>
 			</div>
-			<account agency="vm.destinationAgency" account-number="vm.destinationAccountNumber" other-agency="vm.sourceAgency" other-account-number="vm.sourceAccountNumber" form="transferenceForm"></account>
+			<div>
+				<h3>Destination</h3>
+				<account agency="vm.destinationAgency" account-number="vm.destinationAccountNumber" other-agency="vm.sourceAgency" other-account-number="vm.sourceAccountNumber" form="vm.registerFormScope"></account>
+			</div>
 		</div>
 		<div layout="column" layout-align="start start">
 			<md-input-container>

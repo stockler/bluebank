@@ -4,13 +4,6 @@
  https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Strict_mode
 */
 
-/*
- Modules make it possible to import JavaScript files into your application.  Modules are imported
- using 'require' statements that give you a reference to the module.
-
-  It is a good idea to list the modules that your application depends on in the package.json in the project root
- */
-
 Object.defineProperty(exports, "__esModule", {
   value: true
 });
@@ -252,7 +245,7 @@ var TransactionsController = function () {
           });
         }).then(function (transaction) {
           return res.status(200).json({
-            message: 'You do transfer to CPF: ' + transaction.destination.cpf + ' the amount of ' + transaction.value
+            message: 'You transfered the amount of R$ ' + transaction.value + ' Reais'
           });
         }).catch(function (err) {
           var message = err ? err.message : 'An unespected error has occurred';

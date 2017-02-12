@@ -49,11 +49,35 @@ cd bluebank/server
 # install dependencies
 npm install
 
+# Database - need mongoDB installed
+# execute script to populate database
+node populate
+
 # build the project
 gulp build-test
 
 # run the server
 npm start
+
+# For test use this accounts
+
+Agency: 3505
+AccountNumber: 45380
+cpf: 12345678900
+
+Agency: 3505
+AccountNumber: 45322
+cpf: 31200023499
+
+Agency: 3408
+AccountNumber: 12345
+cpf: 12345698700
+
+Agency: 2143
+AccountNumber: 9831
+cpf: 32198712300
+
+
 ```
 
 You may want to stop:

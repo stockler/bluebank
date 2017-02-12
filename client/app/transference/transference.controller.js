@@ -20,6 +20,10 @@ export default class TransferenceController {
     this.form = form;
   }
 
+  registerFormScope(selfForm, id) {
+    this.form['childForm'+id] = selfForm;
+  }
+
   reset() {
   	this.sourceAgency = null;
     this.sourceAccountNumber = null;

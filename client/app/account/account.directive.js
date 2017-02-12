@@ -14,7 +14,7 @@ export default class AccountDirective {
       accountNumber: '=',
       otherAgency: '=',
       otherAccountNumber: '=',
-      form: '='
+      registerFormScope: '='
     };
 
     this.controller = AccountController;
@@ -23,7 +23,10 @@ export default class AccountDirective {
   }
     
   link() {
-
+    $timeout(function () {
+      this.form.fields = ['agency', 'accountNumber'];
+      this.registerFormScope(this.form, this.$id);
+    });
     
   }
 }

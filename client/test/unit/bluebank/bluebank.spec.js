@@ -28,9 +28,9 @@ describe('Bluebank factory', function() {
 
     it('should return a object with CPF', function() {
       
-      BluebankFactory.account(4300, 348085).then(function(response) {
+      BluebankFactory.account(2143, 9831).then(function(response) {
         console.log(response.data);
-        expect(response.data.cpf).toEqual(21859201890);
+        expect(response.data.cpf).toEqual(32198712300);
       });
       $httpBackend.flush();
       
@@ -48,10 +48,10 @@ describe('Bluebank factory', function() {
     it('should return a message', function() {
       
       BluebankFactory.transference({
-        sourceAgency: 4300,
-        sourceAccountNumber: 348085,
-        destinationAgency: 4300,
-        destinationAccountNumber: 348086,
+        sourceAgency: 3505,
+        sourceAccountNumber: 45322,
+        destinationAgency: 2143,
+        destinationAccountNumber: 9831,
         value: 10       
       }).then(function(response) {
         expect(response.data.message).toEqual('You transfered the amount of R$ 10 Reais');
