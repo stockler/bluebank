@@ -1,0 +1,23 @@
+<md-card layout="column" layout-align="start start">    
+    <md-card-title>
+      <md-card-title-text layout="row" layout-align="start center">
+        <span class="md-headline">Account</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content layout="column" layout-align="start start">      
+      <md-input-container>
+        <label>Agency</label>
+        <input required name="agency" ng-model="vm.agency" type="number" min="1">
+        <div ng-messages="transferenceForm.agency.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>  
+      <md-input-container>
+        <label>Account Number</label>
+        <input required name="accountNumber" ng-model="vm.accountNumber" type="number" min="1">
+        <div ng-messages="transferenceForm.accountNumber.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>      
+    </md-card-content>
+</md-card>

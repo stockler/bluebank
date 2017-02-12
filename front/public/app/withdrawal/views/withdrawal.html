@@ -1,0 +1,51 @@
+<md-content class="md-padding" layout="column" flex>
+  <form name="withdrawalForm" ng-submit="vm.withdrawal(withdrawalForm.$valid)" novalidate flex ng-if="!vm.show">
+  <md-card flex ng-init="vm.setForm(withdrawalForm)">    
+    <md-card-title>
+      <md-card-title-text layout="row" layout-align="start center">
+        <span class="md-headline">Withdrawal</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content>      
+      <md-input-container class="md-block">
+        <label>Withdrawal Value</label>
+        <input required name="withdrawalValue" ng-model="vm.withdrawalValue" type="number" min="2" step="2">
+        <div ng-messages="withdrawalForm.withdrawalValue.$error">
+          <div ng-message="required">This is required.</div>
+        </div>
+      </md-input-container>        
+    </md-card-content>
+    <md-card-actions layout="row"> 
+      <div layout="row" layout-align="start center" flex>
+        <md-button class="md-raised md-link" ui-sref="atm">
+          Back
+        </md-button> 
+      </div>
+      <div layout="row" layout-align="end center" flex>
+        <md-button class="md-raised md-primary" type="submit" id="withdrawal">
+          Withdrawal
+        </md-button>
+      </div>
+    </md-card-actions>
+  </md-card>
+  </form>
+  <md-card flex ng-if="vm.show">
+    <md-card-title>
+      <md-card-title-text layout="row" layout-align="start center">
+        <span id="msg" class="md-headline">Você sacou {{ vm.withdrawalValue }} reais!</span>
+      </md-card-title-text>
+    </md-card-title>
+    <md-card-content> 
+      <ul>
+        <li class="cash" ng-repeat="cash in vm.result" ng-if="cash.qtd > 0">
+          {{ cash.qtd }}x <img ng-src="https://www.bcb.gov.br/htms/mecir/cedulas/real{{('00'+cash.name).slice(-3)}}a.jpg"> reais
+        </li>
+      </ul>
+    </md-card-content> 
+    <md-card-actions layout="row" layout-align="start center">  
+      <md-button class="md-raised md-primary" ng-click="vm.reset()">
+        New withdrawal
+      </md-button>       
+    </md-card-actions>
+  </md-card>
+</md-content>
