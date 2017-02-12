@@ -39,7 +39,7 @@ O banco de dados deve ser populado com algumas contas.
 ```bash
 # clone the repo without git history
 git clone --depth 1 https://github.com/stockler/bluebank.git
-
+```
 
 #For back-end
 
@@ -67,10 +67,11 @@ ctrl + c
 ```bash
 # run unit tests (single run)
 npm test
+```
 
+#For front-end
 
-# For front-end
-
+```bash
 # change current directory to bluebank/client
 cd bluebank/client
 
