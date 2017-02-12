@@ -59,7 +59,7 @@ paths:
         - text/xml
         - text/html
       parameters:
-        - name: transference
+        - name: body
           in: body
           description: The object of the transference amount
           schema:

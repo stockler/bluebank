@@ -17,7 +17,7 @@ import Promise from 'bluebird';
 
 class TransactionsController {
   static transference(req, res) {    
-    let data = req.swagger.params.transference.value;
+    let data = req.swagger.params.body.value;
 
     let sourceAgency;
     let sourceAccountNumber;
@@ -248,11 +248,14 @@ class TransactionsController {
             $currentDate: { 
               lastModified: true 
             }
-          });
+          })
+        .then(() => {
+          return transaction;
+        });
       })
-      .then(() => {
+      .then((transaction) => {
         return res.status(200).json({
-          message: 'OK'
+          message: `You transfered the amount of R$ ${transaction.value} Reais`
         })
       })
       .catch((err) => {

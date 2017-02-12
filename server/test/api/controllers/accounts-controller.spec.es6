@@ -13,7 +13,7 @@ describe('controllers', () => {
       it('should return a valid account', (done) => {
 
         request(server)
-          .get('/rest/account')
+          .get('/rest/account?agency=4300&accountNumber=348085')
           .set('Accept', 'application/json')
           .expect('Content-Type', /json/)
           .expect(200)

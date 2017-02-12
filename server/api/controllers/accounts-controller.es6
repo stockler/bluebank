@@ -23,15 +23,12 @@ class Accounts {
       accountNumber: accountNumber
     })
     .then((account) => {
-      console.log(account.toJSON());
       return res.status(200).json(account.toJSON());
     })
     .catch((err) => {
       let message = err ? err.message : 'An unespected error has occurred';
       return res.status(500).json({ message: message });
-    })
-
-      
+    });
   }
 }
 

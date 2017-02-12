@@ -34,7 +34,7 @@
   },
   "scripts": {
     "start": "node app.js",
-    "test": "swagger project test",
+    "test": "node_modules/.bin/gulp build-test && swagger project test",
     "prestart": "node_modules/.bin/gulp build"
   }
 }
