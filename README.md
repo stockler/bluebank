@@ -41,8 +41,8 @@ O banco de dados deve ser populado com algumas contas.
 git clone --depth 1 https://github.com/stockler/bluebank.git
 ```
 
-#For back-end
-
+##For back-end
+```bash
 # change current directory to bluebank/server
 cd bluebank/server
 
@@ -69,7 +69,7 @@ ctrl + c
 npm test
 ```
 
-#For front-end
+##For front-end
 
 ```bash
 # change current directory to bluebank/client
